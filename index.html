@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="piroVPN — быстрый и надёжный VPN для обхода блокировок и безопасного интернета.">
+  <meta name="keywords" content="впн, скачать впн, бесплатный впн, впн скачать бесплатно, впн на пк, впн для ютуба, без впн, скачать впн на пк, впн расширение, впн для браузера, планет впн, лучший впн, впн на пк бесплатно, впн для андроид, яндекс впн, русский впн, скачать впн на андроид, бесплатный русский впн, радмин впн, скачать русский впн, скачать впн бесплатно на русском, скачать впн на пк бесплатно, какой впн, впн не работает, бесплатный впн без, ютуб без впн, скачать впн на андроид бесплатно, бесплатный впн для андроид, скачать планет впн, скачать без впн, впн россия, впн для ютуба бесплатно, почему впн, включить впн, скачать впн для ютуба, регистрация впн, впн без регистрации, впн для яндекс браузера">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>piroVPN — Современный VPN для тебя</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="manifest" href="/site.webmanifest" />
+  <!-- Подключаем Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Подключаем Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    /* CSS-переменные для управления стилями */
+    :root {
+      --primary-color: #ff8c00;
+      --secondary-color: #ff4500;
+      --bg-color: #f7f7f7;
+      --text-color: #333;
+      --accent-color: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    
+    /* Кнопки */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border: none;
+      border-radius: 50px;
+      background: var(--primary-color);
+      color: var(--accent-color);
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+    .btn:hover, .btn:focus {
+      background: var(--secondary-color);
+      transform: translateY(-2px);
+    }
+    
+    /* Анимация появления */
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+    
+    /* Хедер (Hero) с более выразительным градиентом */
+    header {
+      /* Градиент с тремя цветными остановками для яркости */
+      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, #ff0000 100%);
+      color: var(--accent-color);
+      padding: 100px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    header .hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 8px var(--shadow);
+    }
+    header p {
+      font-size: 1.25rem;
+      margin-bottom: 30px;
+      text-shadow: 0 1px 5px var(--shadow);
+    }
+    header img.logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-out;
+    }
+    
+    /* Основные секции */
+    main {
+      padding: 60px 20px;
+    }
+    
+    .section {
+      max-width: 1200px;
+      margin: 0 auto 60px;
+    }
+    
+    .section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--secondary-color);
+    }
+    
+    .divider {
+      width: 60px;
+      height: 4px;
+      background: var(--secondary-color);
+      margin: 0 auto 40px;
+      border-radius: 2px;
+    }
+    
+    /* Преимущества с использованием CSS Grid */
+    .advantages {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 40px;
+      text-align: center;
+    }
+    .advantage {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .advantage:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px var(--shadow);
+    }
+    .advantage i {
+      font-size: 3rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .advantage h4 {
+      margin-bottom: 10px;
+      font-size: 1.5rem;
+      color: var(--secondary-color);
+    }
+    
+    /* Секция "Как это работает?" */
+    .how-it-works {
+      background: #fff;
+      padding: 60px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px var(--shadow);
+      text-align: center;
+    }
+    .how-it-works p {
+      font-size: 1.125rem;
+      margin-bottom: 30px;
+    }
+    
+    /* SEO-секция с естественным включением ключевых слов */
+    .seo {
+      background: #fff;
+      padding: 40px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px var(--shadow);
+      font-size: 1rem;
+    }
+    .seo p {
+      margin-bottom: 20px;
+      line-height: 1.8;
+    }
+    .seo .text {
+      /* Текст SEO-секции, в который аккуратно вплетены ключевые фразы */
+      text-align: justify;
+    }
+    
+    /* Контакты */
+    .contacts {
+      text-align: center;
+    }
+    .contacts .contact-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+      margin-top: 40px;
+    }
+    .contact-card {
+      background: #fff;
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 16px var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 24px var(--shadow);
+    }
+    .contact-card i {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 15px;
+    }
+    .contact-card h4 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      color: var(--secondary-color);
+    }
+    /* Отступы для кнопок в карточках контактов */
+    .contact-card .btn {
+      margin-top: 15px;
+      padding: 12px 28px;
+      font-size: 1rem;
+    }
+    
+    /* Футер */
+    footer {
+      background: var(--secondary-color);
+      color: var(--accent-color);
+      text-align: center;
+      padding: 20px;
+    }
+    
+    /* Адаптивность */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.25rem;
+      }
+      header p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Хедер (Hero) с выразительным градиентом -->
+  <header>
+    <div class="hero-content fade-in">
+      <img src="logo.png" alt="piroVPN Logo" class="logo">
+      <h1>piroVPN</h1>
+      <p>Обходи блокировки, оставайся анонимным и пользуйся высокой скоростью!</p>
+      <a href="https://t.me/pirovpn_bot" class="btn" target="_blank">Попробовать бесплатно</a>
+    </div>
+  </header>
+  
+  <main>
+    <!-- Преимущества -->
+    <section class="section advantages-section fade-in">
+      <h2>Наши преимущества</h2>
+      <div class="divider"></div>
+      <div class="advantages">
+        <div class="advantage">
+          <i class="fas fa-unlock-alt"></i>
+          <h4>Обход блокировок</h4>
+          <p>Легко обходи цензуру и блокировки с нашим сервисом.</p>
+        </div>
+        <div class="advantage">
+          <i class="fas fa-shield-alt"></i>
+          <h4>Надёжная безопасность</h4>
+          <p>Ваши данные защищены на высоком уровне.</p>
+        </div>
+        <div class="advantage">
+          <i class="fas fa-tachometer-alt"></i>
+          <h4>Высокая скорость</h4>
+          <p>Стабильное соединение и молниеносная скорость работы.</p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Как это работает -->
+    <section class="section how-it-works fade-in">
+      <h2>Как это работает?</h2>
+      <div class="divider"></div>
+      <p>Нажмите кнопку выше и начните пользоваться piroVPN без лишних сложностей.</p>
+      <a href="https://t.me/pirovpn_bot" class="btn" target="_blank">Попробовать бесплатно</a>
+    </section>
+    
+    <!-- SEO-секция с естественной интеграцией ключевых слов -->
+    <section class="section seo fade-in">
+      <h2>О нашем VPN сервисе</h2>
+      <div class="text">
+        <p>
+          Сервис piroVPN – это надёжное решение, когда речь заходит о качественном впн для обеспечения безопасности в интернете. Если вы ищете, где можно <strong>скачать впн</strong> или получить <strong>бесплатный впн</strong>, наш сервис предлагает возможность впн скачать бесплатно для разных устройств. Вы можете использовать впн на пк, а также воспользоваться услугами, когда требуется впн для ютуба или впн расширение для браузера. Пользователи, которым важен лучший впн, отмечают, что наш сервис позволяет <strong>скачать впн на пк</strong> бесплатно, а также использовать впн для андроид – будь то яндекс впн или русский впн.
+        </p>
+        <p>
+          Для тех, кто хочет скачать впн на андроид или предпочитает бесплатный русский впн, piroVPN предоставляет простую регистрацию впн без лишних сложностей. Независимо от того, какой впн вы ищете – впн не работает, бесплатный впн без ограничений, или даже хотите включить впн для яндекс браузера – наш сервис позволяет скачать впн бесплатно на русском, скачать русский впн и даже скачать планет впн. Таким образом, piroVPN становится идеальным выбором для всех, кто хочет понять, почему впн необходим, и как скачать впн для ютуба, обеспечить безопасность и комфорт в сети.
+        </p>
+      </div>
+    </section>
+    
+    <!-- Контакты -->
+    <section class="section contacts fade-in">
+      <h2>Контакты и поддержка</h2>
+      <div class="divider"></div>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <i class="fab fa-telegram-plane"></i>
+          <h4>Telegram-канал</h4>
+          <p>Подписывайтесь на наш канал для новостей и обновлений.</p>
+          <a href="https://t.me/pirovpn" class="btn" target="_blank">Перейти</a>
+        </div>
+        <div class="contact-card">
+          <i class="fas fa-life-ring"></i>
+          <h4>Поддержка</h4>
+          <p>Свяжитесь с нашей поддержкой для оперативного решения вопросов.</p>
+          <a href="https://t.me/pirovpn_support" class="btn" target="_blank">Связаться</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <footer>
+    <p>&copy; 2025 piroVPN. Все права защищены.</p>
+  </footer>
+</body>
+</html>
