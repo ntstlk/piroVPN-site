@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <!-- Yandex.Metrika counter -->
-  <script type="text/javascript" >
+  <!-- Yandex.Metrika counter -->
+  <script type="text/javascript">
     (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-    m[i].l=1*new Date();
-    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+      m[i].l=1*new Date();
+      for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+      k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
     (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
 
     ym(99946568, "init", {
@@ -16,23 +16,29 @@
         webvisor:true
     });
   </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/99946568" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+  <noscript>
+    <div><img src="https://mc.yandex.ru/watch/99946568" style="position:absolute; left:-9999px;" alt="" /></div>
+  </noscript>
   <!-- /Yandex.Metrika counter -->
+
   <meta charset="UTF-8">
-  <meta name="description" content="piroVPN — быстрый и надёжный VPN для обхода блокировок и безопасного интернета.">
-  <meta name="keywords" content="впн, скачать впн, бесплатный впн, впн скачать бесплатно, впн на пк, впн для ютуба, без впн, скачать впн на пк, впн расширение, впн для браузера, планет впн, лучший впн, впн на пк бесплатно, впн для андроид, яндекс впн, русский впн, скачать впн на андроид, бесплатный русский впн, радмин впн, скачать русский впн, скачать впн бесплатно на русском, скачать впн на пк бесплатно, какой впн, впн не работает, бесплатный впн без, ютуб без впн, скачать впн на андроид бесплатно, бесплатный впн для андроид, скачать планет впн, скачать без впн, впн россия, впн для ютуба бесплатно, почему впн, включить впн, скачать впн для ютуба, регистрация впн, впн без регистрации, впн для яндекс браузера">
+  <meta name="description" content="piroVPN 🧨 — быстрый и надёжный VPN для обхода блокировок и безопасного интернета." id="meta-description">
+  <meta name="keywords" content="впн, скачать впн, бесплатный впн, впн скачать бесплатно, впн на пк, впн для ютуба, яндекс впн, русский впн">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>piroVPN — Современный VPN для тебя</title>
+  <title id="page-title">piroVPN — Современный VPN для тебя</title>
+  
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <link rel="shortcut icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
   <link rel="manifest" href="/site.webmanifest" />
+
   <!-- Подключаем Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <!-- Подключаем Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
   <style>
     /* CSS-переменные для управления стилями */
     :root {
@@ -90,21 +96,20 @@
       }
     }
     
-    /* Хедер (Hero) с более выразительным градиентом */
+    /* Хедер (Hero) с выразительным градиентом */
     header {
-      /* Градиент с тремя цветными остановками для яркости */
       background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, #ff0000 100%);
       color: var(--accent-color);
-      padding: 100px 20px;
-      text-align: center;
+      padding: 20px;
       position: relative;
       overflow: hidden;
     }
     header .hero-content {
       max-width: 800px;
-      margin: 0 auto;
+      margin: 50px auto 0;
       position: relative;
       z-index: 1;
+      text-align: center;
     }
     header h1 {
       font-size: 3rem;
@@ -120,6 +125,57 @@
       max-width: 150px;
       margin-bottom: 20px;
       animation: fadeIn 1s ease-out;
+    }
+    
+    /* Мини-меню в шапке */
+    .top-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+    }
+    .mini-menu ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+    }
+    .mini-menu li a {
+      color: var(--accent-color);
+      font-weight: 700;
+      transition: color 0.3s;
+    }
+    .mini-menu li a:hover {
+      color: var(--bg-color);
+    }
+    .lang-switch {
+      background: transparent;
+      border: 2px solid var(--accent-color);
+      border-radius: 20px;
+      color: var(--accent-color);
+      padding: 5px 10px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .lang-switch:hover {
+      background: var(--accent-color);
+      color: var(--secondary-color);
+    }
+    
+    /* Кнопки Google Play и App Store */
+    .store-buttons {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+    .store-buttons img {
+      max-width: 170px; /* увеличенная ширина */
+      transition: transform 0.3s;
+      cursor: default;
+      pointer-events: none; /* делаем некликабельными */
+    }
+    .store-buttons img:hover {
+      transform: scale(1.05);
     }
     
     /* Основные секции */
@@ -189,7 +245,7 @@
       margin-bottom: 30px;
     }
     
-    /* SEO-секция с естественным включением ключевых слов */
+    /* SEO-секция */
     .seo {
       background: #fff;
       padding: 40px 20px;
@@ -200,9 +256,6 @@
     .seo p {
       margin-bottom: 20px;
       line-height: 1.8;
-    }
-    .seo .text {
-      /* Текст SEO-секции, в который аккуратно вплетены ключевые фразы */
       text-align: justify;
     }
     
@@ -210,7 +263,7 @@
     .contacts {
       text-align: center;
     }
-    .contacts .contact-cards {
+    .contact-cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
@@ -237,7 +290,6 @@
       margin-bottom: 10px;
       color: var(--secondary-color);
     }
-    /* Отступы для кнопок в карточках контактов */
     .contact-card .btn {
       margin-top: 15px;
       padding: 12px 28px;
@@ -260,81 +312,109 @@
       header p {
         font-size: 1rem;
       }
+      /* Мобильное меню: вертикальное расположение с дополнительными отступами */
+      .mini-menu ul {
+        flex-direction: column;
+        gap: 15px;
+      }
     }
+    @media (max-width: 600px) {
+  .mini-menu ul {
+    flex-direction: row; /* оставляем элементы в строку */
+    gap: 15px;
+    overflow-x: auto; /* добавляем горизонтальную прокрутку */
+    white-space: nowrap; /* предотвращаем перенос элементов */
+  }
+}
+
   </style>
 </head>
 <body>
-  <!-- Хедер (Hero) с выразительным градиентом -->
+  <!-- Шапка с мини-меню, переключателем языка, логотипом, кнопками магазинов и hero-контентом -->
   <header>
+    <div class="top-menu">
+      <nav class="mini-menu">
+        <ul>
+          <li><a href="#" data-key="home">Домой</a></li>
+          <li><a href="#" data-key="about">О нас</a></li>
+          <li><a href="#" data-key="contacts">Контакты</a></li>
+        </ul>
+      </nav>
+      <button class="lang-switch" onclick="toggleLanguage()">EN</button>
+    </div>
     <div class="hero-content fade-in">
       <img src="logo.png" alt="piroVPN Logo" class="logo">
-      <h1>piroVPN</h1>
-      <p>Обходи блокировки, оставайся анонимным и пользуйся высокой скоростью!</p>
-      <a href="https://t.me/pirovpn_bot" class="btn" target="_blank">Попробовать бесплатно</a>
+      <h1 data-key="hero-title">piroVPN 🧨</h1>
+      <p data-key="hero-desc">Обходи блокировки, оставайся анонимным и пользуйся высокой скоростью!</p>
+      <a href="https://t.me/pirovpn_bot" class="btn" target="_blank" data-key="try-free">Попробовать бесплатно</a>
+      <div class="store-buttons">
+        <a href="javascript:void(0)"><img src="images/appstore.png" alt="App Store"></a>
+        <a href="javascript:void(0)"><img src="images/googleplay.png" alt="Google Play"></a>
+      </div>
     </div>
   </header>
   
   <main>
     <!-- Преимущества -->
     <section class="section advantages-section fade-in">
-      <h2>Наши преимущества</h2>
+      <h2 data-key="advantages-title">Наши преимущества</h2>
       <div class="divider"></div>
       <div class="advantages">
         <div class="advantage">
           <i class="fas fa-unlock-alt"></i>
-          <h4>Обход блокировок</h4>
-          <p>Легко обходи цензуру и блокировки с нашим сервисом.</p>
+          <h4 data-key="advantage1-title">Обход блокировок</h4>
+          <p data-key="advantage1-desc">Легко обходи цензуру и блокировки с нашим сервисом.</p>
         </div>
         <div class="advantage">
           <i class="fas fa-shield-alt"></i>
-          <h4>Надёжная безопасность</h4>
-          <p>Ваши данные защищены на высоком уровне.</p>
+          <h4 data-key="advantage2-title">Надёжная безопасность</h4>
+          <p data-key="advantage2-desc">Ваши данные защищены на высоком уровне.</p>
         </div>
         <div class="advantage">
           <i class="fas fa-tachometer-alt"></i>
-          <h4>Высокая скорость</h4>
-          <p>Стабильное соединение и молниеносная скорость работы.</p>
+          <h4 data-key="advantage3-title">Высокая скорость</h4>
+          <p data-key="advantage3-desc">Стабильное соединение и молниеносная скорость работы.</p>
         </div>
       </div>
     </section>
     
     <!-- Как это работает -->
     <section class="section how-it-works fade-in">
-      <h2>Как это работает?</h2>
+      <h2 data-key="how-title">Как это работает?</h2>
       <div class="divider"></div>
-      <p>Нажмите кнопку выше и начните пользоваться piroVPN без лишних сложностей.</p>
-      <a href="https://t.me/pirovpn_bot" class="btn" target="_blank">Попробовать бесплатно</a>
+      <p data-key="how-desc">Нажмите кнопку выше и начните пользоваться piroVPN без лишних сложностей.</p>
+      <a href="https://t.me/pirovpn_bot" class="btn" target="_blank" data-key="try-free">Попробовать бесплатно</a>
     </section>
     
-    <!-- SEO-секция с естественной интеграцией ключевых слов -->
+    <!-- SEO-секция: О VPN сервисе с указанием протокола VLESS -->
     <section class="section seo fade-in">
-      <h2>О нашем VPN сервисе</h2>
+      <h2 data-key="about-title">О нашем VPN сервисе</h2>
       <div class="text">
-        <p>
-          Сервис piroVPN – это надёжное решение, когда речь заходит о качественном впн для обеспечения безопасности в интернете. Если вы ищете, где можно <strong>скачать впн</strong> или получить <strong>бесплатный впн</strong>, наш сервис предлагает возможность впн скачать бесплатно для разных устройств. Вы можете использовать впн на пк, а также воспользоваться услугами, когда требуется впн для ютуба или впн расширение для браузера. Пользователи, которым важен лучший впн, отмечают, что наш сервис позволяет <strong>скачать впн на пк</strong> бесплатно, а также использовать впн для андроид – будь то яндекс впн или русский впн.
+        <p data-key="about-desc">
+          Сервис piroVPN – это надёжное решение, когда речь заходит о качественном VPN для обеспечения безопасности в интернете. Используется протокол VLESS для оптимальной работы.
         </p>
-        <p>
-          Для тех, кто хочет скачать впн на андроид или предпочитает бесплатный русский впн, piroVPN предоставляет простую регистрацию впн без лишних сложностей. Независимо от того, какой впн вы ищете – впн не работает, бесплатный впн без ограничений, или даже хотите включить впн для яндекс браузера – наш сервис позволяет скачать впн бесплатно на русском, скачать русский впн и даже скачать планет впн. Таким образом, piroVPN становится идеальным выбором для всех, кто хочет понять, почему впн необходим, и как скачать впн для ютуба, обеспечить безопасность и комфорт в сети.
+        <p data-key="about-desc2">
+          Если вы ищете, где можно <strong>скачать VPN</strong> или получить <strong>бесплатный VPN</strong>, наш сервис предлагает возможность VPN скачать бесплатно для разных устройств.
         </p>
       </div>
     </section>
     
     <!-- Контакты -->
     <section class="section contacts fade-in">
-      <h2>Контакты и поддержка</h2>
+      <h2 data-key="contacts-title">Контакты и поддержка</h2>
       <div class="divider"></div>
       <div class="contact-cards">
         <div class="contact-card">
           <i class="fab fa-telegram-plane"></i>
-          <h4>Telegram-канал</h4>
-          <p>Подписывайтесь на наш канал для новостей и обновлений.</p>
-          <a href="https://t.me/pirovpn" class="btn" target="_blank">Перейти</a>
+          <h4 data-key="telegram-title">Telegram-канал</h4>
+          <p data-key="telegram-desc">Подписывайтесь на наш канал для новостей и обновлений.</p>
+          <a href="https://t.me/pirovpn" class="btn" target="_blank" data-key="go">Перейти</a>
         </div>
         <div class="contact-card">
           <i class="fas fa-life-ring"></i>
-          <h4>Поддержка</h4>
-          <p>Свяжитесь с нашей поддержкой для оперативного решения вопросов.</p>
-          <a href="https://t.me/pirovpn_support" class="btn" target="_blank">Связаться</a>
+          <h4 data-key="support-title">Поддержка</h4>
+          <p data-key="support-desc">Свяжитесь с нашей поддержкой для оперативного решения вопросов.</p>
+          <a href="https://t.me/pirovpn_support" class="btn" target="_blank" data-key="contact">Связаться</a>
         </div>
       </div>
     </section>
@@ -343,5 +423,95 @@
   <footer>
     <p>&copy; 2025 piroVPN. Все права защищены.</p>
   </footer>
+  
+  <!-- Скрипт для переключения языка -->
+  <script>
+    const translations = {
+      ru: {
+        "home": "Домой",
+        "about": "О нас",
+        "contacts": "Контакты",
+        "hero-title": "piroVPN 🧨",
+        "hero-desc": "Обходи блокировки, оставайся анонимным и пользуйся высокой скоростью!",
+        "try-free": "Попробовать бесплатно",
+        "advantages-title": "Наши преимущества",
+        "advantage1-title": "Обход блокировок",
+        "advantage1-desc": "Легко обходи цензуру и блокировки с нашим сервисом.",
+        "advantage2-title": "Надёжная безопасность",
+        "advantage2-desc": "Ваши данные защищены на высоком уровне.",
+        "advantage3-title": "Высокая скорость",
+        "advantage3-desc": "Стабильное соединение и молниеносная скорость работы.",
+        "how-title": "Как это работает?",
+        "how-desc": "Нажмите кнопку выше и начните пользоваться piroVPN без лишних сложностей.",
+        "about-title": "О нашем VPN сервисе",
+        "about-desc": "Сервис piroVPN – это надёжное решение, когда речь заходит о качественном VPN для обеспечения безопасности в интернете. Используется протокол VLESS для оптимальной работы.",
+        "about-desc2": "Если вы ищете, где можно <strong>скачать VPN</strong> или получить <strong>бесплатный VPN</strong>, наш сервис предлагает возможность VPN скачать бесплатно для разных устройств.",
+        "contacts-title": "Контакты и поддержка",
+        "telegram-title": "Telegram-канал",
+        "telegram-desc": "Подписывайтесь на наш канал для новостей и обновлений.",
+        "support-title": "Поддержка",
+        "support-desc": "Свяжитесь с нашей поддержкой для оперативного решения вопросов.",
+        "go": "Перейти",
+        "contact": "Связаться"
+      },
+      en: {
+        "home": "Home",
+        "about": "About",
+        "contacts": "Contacts",
+        "hero-title": "piroVPN 🧨",
+        "hero-desc": "Bypass blocks, stay anonymous and enjoy high speed!",
+        "try-free": "Try for Free",
+        "advantages-title": "Our Advantages",
+        "advantage1-title": "Bypass Blocks",
+        "advantage1-desc": "Easily bypass censorship and blocks with our service.",
+        "advantage2-title": "Reliable Security",
+        "advantage2-desc": "Your data is protected at a high level.",
+        "advantage3-title": "High Speed",
+        "advantage3-desc": "Stable connection and lightning-fast speeds.",
+        "how-title": "How It Works?",
+        "how-desc": "Click the button above and start using piroVPN with ease.",
+        "about-title": "About Our VPN Service",
+        "about-desc": "piroVPN is a reliable solution for quality VPN service to secure your internet. It uses the VLESS protocol for optimal performance.",
+        "about-desc2": "If you're looking for where to <strong>download a VPN</strong> or get a <strong>free VPN</strong>, our service offers VPN downloads for various devices.",
+        "contacts-title": "Contacts & Support",
+        "telegram-title": "Telegram Channel",
+        "telegram-desc": "Subscribe to our channel for news and updates.",
+        "support-title": "Support",
+        "support-desc": "Contact our support for prompt assistance.",
+        "go": "Go",
+        "contact": "Contact"
+      }
+    };
+
+    let currentLang = navigator.language.startsWith('en') ? 'en' : 'ru';
+
+    function setLanguage(lang) {
+      currentLang = lang;
+      document.querySelectorAll('[data-key]').forEach(el => {
+        const key = el.getAttribute('data-key');
+        if (translations[lang][key]) {
+          el.innerHTML = translations[lang][key];
+        }
+      });
+      if(lang === 'en'){
+        document.getElementById('meta-description').setAttribute('content', 'piroVPN 🧨 — fast and reliable VPN to bypass restrictions and secure the internet.');
+        document.getElementById('page-title').innerText = 'piroVPN — Modern VPN for You';
+        document.querySelector('.lang-switch').innerText = 'РУ';
+      } else {
+        document.getElementById('meta-description').setAttribute('content', 'piroVPN 🧨 — быстрый и надёжный VPN для обхода блокировок и безопасного интернета.');
+        document.getElementById('page-title').innerText = 'piroVPN — Современный VPN для тебя';
+        document.querySelector('.lang-switch').innerText = 'EN';
+      }
+    }
+
+    function toggleLanguage() {
+      const newLang = currentLang === 'ru' ? 'en' : 'ru';
+      setLanguage(newLang);
+    }
+
+    window.onload = function() {
+      setLanguage(currentLang);
+    }
+  </script>
 </body>
 </html>
